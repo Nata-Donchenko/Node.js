@@ -1,5 +1,8 @@
 const taskService = require('./modules/taskService')
 const taskFormatter = require('./modules/taskFormatter')
+const fileStorage = require('./modules/fileStorage')
+
+fileStorage.initStorage()
 
 console.log('Додаємо задачі:')
 const task1 = taskService.addTask('Купити хліб')
@@ -10,15 +13,11 @@ console.log('Додано', task1.title);
 console.log('Додано', task2.title);
 console.log('Додано', task3.title);
 
+fileStorage.saveTasks(taskService.getTasks())
+
 console.log('Список задач:')
 taskFormatter.showTasksList(taskService.getTasks())
 
-console.log('Позначення виконаної (id=1)');
-taskService.completeTask(task1.id);
-
-console.log('Видаляємо задачу (id=2) ');
-const deleted = taskService.deleteTask(task2.id);
-console.log(deleted ? 'Задачу видалено' : 'Задачу не знайдено');
-
-console.log('Список задач після змін:');
-taskFormatter.showTasksList(taskService.getTasks());
+console.log('Задачі, прочитані з файлу')
+const tasksFromFile = fileStorage.readTasks()
+taskFormatter.showTasksList(tasksFromFile)
