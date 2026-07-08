@@ -1,7 +1,7 @@
 function showTask(task) {
   const status = task.completed ? 'completed' : 'in progress'
   
-  console.log(`[${task.id}] ${task.title} — ${status}`)
+  console.log(`[${task.id}] [${task.hash.slice(0, 8)}] ${task.title} — ${status}`)
 }
 
 function showTasksList(tasks) {

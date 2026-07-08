@@ -1,15 +1,29 @@
+const { emitter } = require('./eventLogger')
+const crypto = require('crypto')
+
 let tasks = []
 let nextId = 1
 
 function addTask(title) {
+  const id = nextId++
+  const createdAt = new Date().toISOString()
+  const hash = crypto
+    .createHash('sha256')
+    .update(`${id}-${title}-${createdAt}`)
+    .digest('hex')
+
   const task = {
-    id: nextId++,
+    id,
     title,
     completed: false,
-    createdAt: new Date().toISOString(),
+    createdAt,
+    hash
   }
-  
+
   tasks.push(task)
+
+  emitter.emit('taskCreated', task)
+
   return task
 }
 
@@ -26,13 +40,21 @@ function completeTask(id) {
   }
 
   task.completed = true
+
+  emitter.emit('taskCompleted', task)
+
   return task
 }
 
 function deleteTask(id) {
   const initialLength = tasks.length
+  const task = tasks.find((task) => task.id === id)
 
   tasks = tasks.filter((task) => task.id !== id)
+
+  if(task) {
+    emitter.emit('taskDeleted', task)
+  }
 
   return tasks.length < initialLength
 }

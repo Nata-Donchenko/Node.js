@@ -24,7 +24,6 @@ function initStorage() {
   const isExistFolder = fs.existsSync(pathFolder)
   const isExistJson = fs.existsSync(pathJson)
 
-
   if(!isExistFolder) {
     fs.mkdirSync(pathFolder)
   } 
@@ -32,7 +31,6 @@ function initStorage() {
   if(!isExistJson) {
     fs.writeFileSync(pathJson, JSON.stringify([]))
   }
-  
 }
 
 module.exports = {
