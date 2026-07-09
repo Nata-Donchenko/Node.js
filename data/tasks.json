@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Купити хліб",
+    "completed": false,
+    "createdAt": "2026-07-09T19:16:58.547Z",
+    "hash": "1e8b594de30efbf7bd77a225c7fa7f943bf6dcaf7a47e3bb7731531650d88f71"
+  },
+  {
+    "id": 2,
+    "title": "Поспати",
+    "completed": false,
+    "createdAt": "2026-07-09T19:16:58.547Z",
+    "hash": "9075e133c311d810ec69f18646ef8caa47e51099228442be7afb4f9f03bb5e2d"
+  },
+  {
+    "id": 3,
+    "title": "Вивичити Node.js",
+    "completed": false,
+    "createdAt": "2026-07-09T19:16:58.547Z",
+    "hash": "0e128691e055799b8bea7992af0016d15acf09074ffa9479615b0b6695ebed50"
+  }
+]

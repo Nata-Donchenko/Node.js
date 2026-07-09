@@ -59,9 +59,14 @@ function deleteTask(id) {
   return tasks.length < initialLength
 }
 
+function loadTasks(loadedTasks) {
+  tasks = loadedTasks
+}
+
 module.exports = {
   addTask,
   getTasks,
   completeTask,
   deleteTask,
+  loadTasks,
 }

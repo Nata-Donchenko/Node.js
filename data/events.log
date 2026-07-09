@@ -1,0 +1,18 @@
+2026-07-09T17:02:05.677Z | appStarted | Application started 
+2026-07-09T17:02:05.687Z | taskCreated | Task 'Купити хліб' was created 
+2026-07-09T17:02:05.687Z | taskCreated | Task 'Поспати' was created 
+2026-07-09T17:02:05.687Z | taskCreated | Task 'Вивичити Node.js' was created 
+2026-07-09T17:02:05.692Z | taskCompleted | Task 'Купити хліб' was completed 
+2026-07-09T17:02:05.694Z | taskDeleted | Task 'Поспати' was deleted 
+2026-07-09T19:02:28.041Z | appStarted | Application started 
+2026-07-09T19:02:28.067Z | taskCreated | Task 'Купити хліб' was created 
+2026-07-09T19:02:28.068Z | taskCreated | Task 'Поспати' was created 
+2026-07-09T19:02:28.069Z | taskCreated | Task 'Вивичити Node.js' was created 
+2026-07-09T19:02:28.075Z | taskCompleted | Task 'Купити хліб' was completed 
+2026-07-09T19:02:28.075Z | taskDeleted | Task 'Поспати' was deleted 
+2026-07-09T19:16:58.543Z | appStarted | Application started 
+2026-07-09T19:16:58.547Z | taskCreated | Task 'Купити хліб' was created 
+2026-07-09T19:16:58.547Z | taskCreated | Task 'Поспати' was created 
+2026-07-09T19:16:58.547Z | taskCreated | Task 'Вивичити Node.js' was created 
+2026-07-09T19:16:58.550Z | taskCompleted | Task 'Купити хліб' was completed 
+2026-07-09T19:16:58.550Z | taskDeleted | Task 'Поспати' was deleted 
