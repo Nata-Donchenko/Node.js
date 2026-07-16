@@ -1,0 +1,8 @@
+<h1><%= name %></h1>
+<p><%= role %></p>
+<ul>
+  <% hobbies.forEach((hobby) => { %>
+    <li><%= hobby %></li>
+  <% }); %>
+</ul>
+<div><%= isOnline ? 'Online' : 'Offline'%></div>
