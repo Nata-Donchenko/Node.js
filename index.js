@@ -1,13 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getAverage(arr) {
-    if (arr.length === 0)
-        return 0;
-    const sum = arr.reduce((acc, el) => {
-        return acc + el;
-    }, 0);
-    const average = sum / arr.length;
-    return average;
+function getProductInfo(product) {
+    return `Товар: ${product.title}, ціна: ${product.price} грн, в наявності: ${product.stock ? 'Так' : 'Ні'}`;
 }
-console.log(getAverage([1, 2, 3, 4, 5]));
-console.log(getAverage([]));
+console.log(getProductInfo({ title: 'Ноутбук', price: 15000, stock: true }));
+console.log(getProductInfo({ title: 'Мишка', price: 500, stock: false }));

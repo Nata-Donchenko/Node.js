@@ -1,13 +1,13 @@
-function getAverage (arr: number[]): number {
-  if (arr.length === 0) return 0;
-
-  const sum = arr.reduce((acc, el) => {
-    return acc + el;
-  }, 0);
-
-  const average = sum / arr.length;
-  return average;
+interface Product {
+    title: string;
+    price: number;
+    stock: boolean;
 }
 
-console.log(getAverage([1, 2, 3, 4, 5]));
-console.log(getAverage([]));
+function getProductInfo(product: Product): string {
+
+  return `Товар: ${product.title}, ціна: ${product.price} грн, в наявності: ${product.stock ? 'Так' : 'Ні'}`;
+}
+
+console.log(getProductInfo({ title: 'Ноутбук', price: 15000, stock: true }));
+console.log(getProductInfo({ title: 'Мишка', price: 500, stock: false }));
