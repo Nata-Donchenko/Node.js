@@ -1,13 +1,14 @@
-interface Product {
-    title: string;
-    price: number;
-    stock: boolean;
+interface TreeNode {
+  value: number;
+  child: TreeNode | null;
 }
 
-function getProductInfo(product: Product): string {
+function createTree(depth: number): TreeNode | null {
 
-  return `Товар: ${product.title}, ціна: ${product.price} грн, в наявності: ${product.stock ? 'Так' : 'Ні'}`;
+  if (depth === 0) return null;
+
+  return {value: depth, child: createTree(depth - 1)};
 }
 
-console.log(getProductInfo({ title: 'Ноутбук', price: 15000, stock: true }));
-console.log(getProductInfo({ title: 'Мишка', price: 500, stock: false }));
+console.log(createTree(3));
+console.log(JSON.stringify(createTree(3), null, 2));

@@ -1,7 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function getProductInfo(product) {
-    return `Товар: ${product.title}, ціна: ${product.price} грн, в наявності: ${product.stock ? 'Так' : 'Ні'}`;
+function createTree(depth) {
+    if (depth === 0)
+        return null;
+    return { value: depth, child: createTree(depth - 1) };
 }
-console.log(getProductInfo({ title: 'Ноутбук', price: 15000, stock: true }));
-console.log(getProductInfo({ title: 'Мишка', price: 500, stock: false }));
+console.log(createTree(3));
+console.log(JSON.stringify(createTree(3), null, 2));
