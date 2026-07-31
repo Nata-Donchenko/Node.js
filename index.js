@@ -1,9 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function createTree(depth) {
-    if (depth === 0)
-        return null;
-    return { value: depth, child: createTree(depth - 1) };
+function reverseArray(arr) {
+    return arr.reverse();
 }
-console.log(createTree(3));
-console.log(JSON.stringify(createTree(3), null, 2));
+const arr = [1, 2, 3];
+const reversedArr = reverseArray(arr);
+const arr2 = ['a', 'b', 'c'];
+const reversedArr2 = reverseArray(arr2);
+console.log(reversedArr);
+console.log(reversedArr === arr);
+console.log(reversedArr2);
+console.log(reversedArr2 === arr2);
