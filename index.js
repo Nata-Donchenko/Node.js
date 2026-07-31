@@ -1,13 +1,18 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function reverseArray(arr) {
-    return arr.reverse();
+function highlightForbiddenWords(text, forbiddenWords) {
+    forbiddenWords.forEach((word) => {
+        text = text.replaceAll(word, `<del>${word}</del>`);
+    });
+    return text;
 }
-const arr = [1, 2, 3];
-const reversedArr = reverseArray(arr);
-const arr2 = ['a', 'b', 'c'];
-const reversedArr2 = reverseArray(arr2);
-console.log(reversedArr);
-console.log(reversedArr === arr);
-console.log(reversedArr2);
-console.log(reversedArr2 === arr2);
+document.getElementById('submit')?.addEventListener('click', () => {
+    const textEl = document.getElementById('input');
+    const wordsEl = document.getElementById('wordsInput');
+    const resultEl = document.getElementById('result');
+    const text = textEl.value;
+    const forbiddenWords = wordsEl.value.split(',').map((w) => w.trim());
+    const highlighted = highlightForbiddenWords(text, forbiddenWords);
+    if (resultEl) {
+        resultEl.innerHTML = highlighted;
+    }
+});
+export {};

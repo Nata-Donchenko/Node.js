@@ -1,12 +1,22 @@
-function reverseArray<T>(arr: T[]): T[] {
-    return arr.reverse();
+function highlightForbiddenWords(text: string, forbiddenWords: string[]): string {
+  forbiddenWords.forEach((word) => {
+     text = text.replaceAll(word, `<del>${word}</del>`);
+  });
+
+  return text;
 }
 
-const arr = [1, 2, 3];
-const reversedArr = reverseArray(arr);
-const arr2 = ['a', 'b', 'c'];
-const reversedArr2 = reverseArray(arr2);
-console.log(reversedArr);
-console.log(reversedArr === arr);
-console.log(reversedArr2);
-console.log(reversedArr2 === arr2);
+document.getElementById('submit')?.addEventListener('click', () => {
+  const textEl = document.getElementById('input') as HTMLTextAreaElement;
+  const wordsEl = document.getElementById('wordsInput') as HTMLInputElement;
+  const resultEl = document.getElementById('result');
+
+  const text = textEl.value;
+  const forbiddenWords = wordsEl.value.split(',').map((w) => w.trim());
+
+  const highlighted = highlightForbiddenWords(text, forbiddenWords);
+
+  if (resultEl) {
+    resultEl.innerHTML = highlighted;
+  }
+});
