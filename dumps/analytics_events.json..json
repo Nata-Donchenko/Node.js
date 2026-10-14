@@ -1,0 +1,868 @@
+[{
+  "_id": {
+    "$oid": "6acfacdbb1c598cc0cc9df93"
+  },
+  "type": "user_register",
+  "method": "POST",
+  "endpoint": "/users/register",
+  "timestamp": {
+    "$date": "2026-10-14T16:24:59.715Z"
+  },
+  "statusCode": 201,
+  "durationMs": 128,
+  "details": {
+    "email": "owner1@shop.com",
+    "isOwner": true,
+    "success": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acface2b1c598cc0cc9df94"
+  },
+  "type": "user_register",
+  "method": "POST",
+  "endpoint": "/users/register",
+  "timestamp": {
+    "$date": "2026-10-14T16:25:06.286Z"
+  },
+  "statusCode": 201,
+  "durationMs": 130,
+  "details": {
+    "email": "owner2@shop.com",
+    "isOwner": true,
+    "success": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acface7b1c598cc0cc9df95"
+  },
+  "type": "user_register",
+  "method": "POST",
+  "endpoint": "/users/register",
+  "timestamp": {
+    "$date": "2026-10-14T16:25:11.239Z"
+  },
+  "statusCode": 201,
+  "durationMs": 91,
+  "details": {
+    "email": "owner3@shop.com",
+    "isOwner": true,
+    "success": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfacebb1c598cc0cc9df96"
+  },
+  "type": "user_register",
+  "method": "POST",
+  "endpoint": "/users/register",
+  "timestamp": {
+    "$date": "2026-10-14T16:25:15.675Z"
+  },
+  "statusCode": 201,
+  "durationMs": 108,
+  "details": {
+    "email": "buyer1@shop.com",
+    "isOwner": false,
+    "success": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfacf0b1c598cc0cc9df97"
+  },
+  "type": "user_register",
+  "method": "POST",
+  "endpoint": "/users/register",
+  "timestamp": {
+    "$date": "2026-10-14T16:25:20.419Z"
+  },
+  "statusCode": 201,
+  "durationMs": 244,
+  "details": {
+    "email": "buyer2@shop.com",
+    "isOwner": false,
+    "success": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfacfcb1c598cc0cc9df98"
+  },
+  "type": "user_register",
+  "method": "POST",
+  "endpoint": "/users/register",
+  "timestamp": {
+    "$date": "2026-10-14T16:25:32.423Z"
+  },
+  "statusCode": 409,
+  "durationMs": 13,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfad22b1c598cc0cc9df99"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:26:10.306Z"
+  },
+  "statusCode": 200,
+  "durationMs": 222,
+  "details": {
+    "email": "owner1@shop.com",
+    "success": true,
+    "userId": 1,
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfad35b1c598cc0cc9df9a"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:26:29.278Z"
+  },
+  "statusCode": 200,
+  "durationMs": 182,
+  "details": {
+    "email": "owner2@shop.com",
+    "success": true,
+    "userId": 2,
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfad41b1c598cc0cc9df9b"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:26:41.241Z"
+  },
+  "statusCode": 200,
+  "durationMs": 113,
+  "details": {
+    "email": "owner3@shop.com",
+    "success": true,
+    "userId": 3,
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfad65b1c598cc0cc9df9c"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:27:17.120Z"
+  },
+  "statusCode": 401,
+  "durationMs": 100,
+  "details": {
+    "email": "owner1@shop.com",
+    "success": false,
+    "failureReason": "wrong_password",
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfad6cb1c598cc0cc9df9d"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:27:24.917Z"
+  },
+  "statusCode": 401,
+  "durationMs": 2,
+  "details": {
+    "email": "hacker@shop.com",
+    "success": false,
+    "failureReason": "user_not_found",
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfada3b1c598cc0cc9df9e"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:28:19.647Z"
+  },
+  "statusCode": 201,
+  "durationMs": 49,
+  "details": {
+    "productId": 1,
+    "ownerId": 1,
+    "product": {
+      "name": "Футболка біла",
+      "price": 450.5
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfadadb1c598cc0cc9df9f"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:28:29.891Z"
+  },
+  "statusCode": 201,
+  "durationMs": 22,
+  "details": {
+    "productId": 2,
+    "ownerId": 1,
+    "product": {
+      "name": "Кепка",
+      "price": 299
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfadc2b1c598cc0cc9dfa0"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:28:50.315Z"
+  },
+  "statusCode": 201,
+  "durationMs": 28,
+  "details": {
+    "productId": 3,
+    "ownerId": 2,
+    "product": {
+      "name": "Кросівки бігові",
+      "price": 2899
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfadd4b1c598cc0cc9dfa1"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:29:08.166Z"
+  },
+  "statusCode": 201,
+  "durationMs": 32,
+  "details": {
+    "productId": 4,
+    "ownerId": 2,
+    "product": {
+      "name": "Рюкзак міський",
+      "price": 1350
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfade8b1c598cc0cc9dfa2"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:29:28.284Z"
+  },
+  "statusCode": 201,
+  "durationMs": 37,
+  "details": {
+    "productId": 5,
+    "ownerId": 3,
+    "product": {
+      "name": "Ноутбук",
+      "price": 32999
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfadedb1c598cc0cc9dfa3"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:29:33.295Z"
+  },
+  "statusCode": 201,
+  "durationMs": 23,
+  "details": {
+    "productId": 6,
+    "ownerId": 3,
+    "product": {
+      "name": "Термочашка",
+      "price": 399.99
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfae13b1c598cc0cc9dfa4"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:30:11.731Z"
+  },
+  "statusCode": 200,
+  "durationMs": 118,
+  "details": {
+    "email": "buyer1@shop.com",
+    "success": true,
+    "userId": 4,
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfae31b1c598cc0cc9dfa5"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:30:41.751Z"
+  },
+  "statusCode": 403,
+  "durationMs": 1,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfae7bb1c598cc0cc9dfa6"
+  },
+  "type": "user_login",
+  "method": "POST",
+  "endpoint": "/users/login",
+  "timestamp": {
+    "$date": "2026-10-14T16:31:55.234Z"
+  },
+  "statusCode": 200,
+  "durationMs": 143,
+  "details": {
+    "email": "owner1@shop.com",
+    "success": true,
+    "userId": 1,
+    "client": {
+      "ip": "::1",
+      "userAgent": "PostmanRuntime/7.54.0"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaea1b1c598cc0cc9dfa7"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/1/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:32:33.625Z"
+  },
+  "statusCode": 201,
+  "durationMs": 36,
+  "details": {
+    "productId": 1,
+    "attribute": {
+      "name": "color",
+      "value": "білий"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaeadb1c598cc0cc9dfa8"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/1/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:32:45.063Z"
+  },
+  "statusCode": 201,
+  "durationMs": 55,
+  "details": {
+    "productId": 1,
+    "attribute": {
+      "name": "size",
+      "value": "M"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaeb3b1c598cc0cc9dfa9"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/1/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:32:51.763Z"
+  },
+  "statusCode": 201,
+  "durationMs": 29,
+  "details": {
+    "productId": 1,
+    "attribute": {
+      "name": "material",
+      "value": "бавовна"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaeceb1c598cc0cc9dfaa"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/3/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:33:18.461Z"
+  },
+  "statusCode": 201,
+  "durationMs": 31,
+  "details": {
+    "productId": 3,
+    "attribute": {
+      "name": "size",
+      "value": "42"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaed4b1c598cc0cc9dfab"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/3/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:33:24.341Z"
+  },
+  "statusCode": 201,
+  "durationMs": 26,
+  "details": {
+    "productId": 3,
+    "attribute": {
+      "name": "color",
+      "value": "чорний"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaef1b1c598cc0cc9dfac"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/5/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:33:52.984Z"
+  },
+  "statusCode": 201,
+  "durationMs": 37,
+  "details": {
+    "productId": 5,
+    "attribute": {
+      "name": "cpu",
+      "value": "Intel i5"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaef7b1c598cc0cc9dfad"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/5/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:33:59.900Z"
+  },
+  "statusCode": 201,
+  "durationMs": 27,
+  "details": {
+    "productId": 5,
+    "attribute": {
+      "name": "ram",
+      "value": "16 GB"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaefcb1c598cc0cc9dfae"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/5/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:34:04.546Z"
+  },
+  "statusCode": 201,
+  "durationMs": 26,
+  "details": {
+    "productId": 5,
+    "attribute": {
+      "name": "screen",
+      "value": "14 inch"
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf19b1c598cc0cc9dfaf"
+  },
+  "type": "attribute_add",
+  "method": "POST",
+  "endpoint": "/products/1/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:34:33.542Z"
+  },
+  "statusCode": 403,
+  "durationMs": 30,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfaf37b1c598cc0cc9dfb0"
+  },
+  "type": "product_list_view",
+  "method": "GET",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:35:03.624Z"
+  },
+  "statusCode": 200,
+  "durationMs": 22,
+  "details": {
+    "count": 6
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf4cb1c598cc0cc9dfb1"
+  },
+  "type": "product_view",
+  "method": "GET",
+  "endpoint": "/products/1",
+  "timestamp": {
+    "$date": "2026-10-14T16:35:24.181Z"
+  },
+  "statusCode": 200,
+  "durationMs": 17,
+  "details": {
+    "productId": "1",
+    "found": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf57b1c598cc0cc9dfb2"
+  },
+  "type": "product_view",
+  "method": "GET",
+  "endpoint": "/products/3",
+  "timestamp": {
+    "$date": "2026-10-14T16:35:35.941Z"
+  },
+  "statusCode": 200,
+  "durationMs": 11,
+  "details": {
+    "productId": "3",
+    "found": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf5db1c598cc0cc9dfb3"
+  },
+  "type": "product_view",
+  "method": "GET",
+  "endpoint": "/products/5",
+  "timestamp": {
+    "$date": "2026-10-14T16:35:41.952Z"
+  },
+  "statusCode": 200,
+  "durationMs": 6,
+  "details": {
+    "productId": "5",
+    "found": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf63b1c598cc0cc9dfb4"
+  },
+  "type": "product_view",
+  "method": "GET",
+  "endpoint": "/products/999",
+  "timestamp": {
+    "$date": "2026-10-14T16:35:47.240Z"
+  },
+  "statusCode": 404,
+  "durationMs": 2,
+  "details": {
+    "productId": "999",
+    "found": false
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf69b1c598cc0cc9dfb5"
+  },
+  "type": "attribute_list_view",
+  "method": "GET",
+  "endpoint": "/products/1/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:35:53.215Z"
+  },
+  "statusCode": 200,
+  "durationMs": 11,
+  "details": {
+    "productId": "1",
+    "count": 3
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf71b1c598cc0cc9dfb6"
+  },
+  "type": "attribute_list_view",
+  "method": "GET",
+  "endpoint": "/products/5/attributes",
+  "timestamp": {
+    "$date": "2026-10-14T16:36:01.696Z"
+  },
+  "statusCode": 200,
+  "durationMs": 3,
+  "details": {
+    "productId": "5",
+    "count": 3
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf78b1c598cc0cc9dfb7"
+  },
+  "type": "user_profile_view",
+  "method": "GET",
+  "endpoint": "/users/1",
+  "timestamp": {
+    "$date": "2026-10-14T16:36:08.494Z"
+  },
+  "statusCode": 200,
+  "durationMs": 6,
+  "details": {
+    "viewedUserId": "1",
+    "found": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf81b1c598cc0cc9dfb8"
+  },
+  "type": "user_profile_view",
+  "method": "GET",
+  "endpoint": "/users/2",
+  "timestamp": {
+    "$date": "2026-10-14T16:36:17.072Z"
+  },
+  "statusCode": 200,
+  "durationMs": 4,
+  "details": {
+    "viewedUserId": "2",
+    "found": true
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaf89b1c598cc0cc9dfb9"
+  },
+  "type": "unknown_request",
+  "method": "GET",
+  "endpoint": "/something",
+  "timestamp": {
+    "$date": "2026-10-14T16:36:25.326Z"
+  },
+  "statusCode": 404,
+  "durationMs": 2,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfafa5b1c598cc0cc9dfba"
+  },
+  "type": "product_update",
+  "method": "PUT",
+  "endpoint": "/products/2",
+  "timestamp": {
+    "$date": "2026-10-14T16:36:53.420Z"
+  },
+  "statusCode": 200,
+  "durationMs": 47,
+  "details": {
+    "productId": 2,
+    "ownerId": 1,
+    "changedFields": [
+      "price"
+    ]
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfafb7b1c598cc0cc9dfbb"
+  },
+  "type": "product_update",
+  "method": "PUT",
+  "endpoint": "/products/2",
+  "timestamp": {
+    "$date": "2026-10-14T16:37:10.949Z"
+  },
+  "statusCode": 403,
+  "durationMs": 52,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfafddb1c598cc0cc9dfbc"
+  },
+  "type": "product_create",
+  "method": "POST",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:37:49.113Z"
+  },
+  "statusCode": 201,
+  "durationMs": 40,
+  "details": {
+    "productId": 7,
+    "ownerId": 3,
+    "product": {
+      "name": "Тимчасовий товар",
+      "price": 1
+    }
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfaff9b1c598cc0cc9dfbd"
+  },
+  "type": "unknown_request",
+  "method": "POST",
+  "endpoint": "/products/7",
+  "timestamp": {
+    "$date": "2026-10-14T16:38:17.508Z"
+  },
+  "statusCode": 404,
+  "durationMs": 3,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfb00bb1c598cc0cc9dfbe"
+  },
+  "type": "unknown_request",
+  "method": "POST",
+  "endpoint": "/products/7",
+  "timestamp": {
+    "$date": "2026-10-14T16:38:35.262Z"
+  },
+  "statusCode": 404,
+  "durationMs": 3,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfb02ab1c598cc0cc9dfbf"
+  },
+  "type": "product_list_view",
+  "method": "GET",
+  "endpoint": "/products",
+  "timestamp": {
+    "$date": "2026-10-14T16:39:06.577Z"
+  },
+  "statusCode": 200,
+  "durationMs": 8,
+  "details": {
+    "count": 7
+  }
+},
+{
+  "_id": {
+    "$oid": "6acfb049b1c598cc0cc9dfc0"
+  },
+  "type": "product_delete",
+  "method": "DELETE",
+  "endpoint": "/products/7",
+  "timestamp": {
+    "$date": "2026-10-14T16:39:37.066Z"
+  },
+  "statusCode": 403,
+  "durationMs": 7,
+  "details": null
+},
+{
+  "_id": {
+    "$oid": "6acfb056b1c598cc0cc9dfc1"
+  },
+  "type": "product_delete",
+  "method": "DELETE",
+  "endpoint": "/products/7",
+  "timestamp": {
+    "$date": "2026-10-14T16:39:50.400Z"
+  },
+  "statusCode": 204,
+  "durationMs": 26,
+  "details": {
+    "productId": 7,
+    "ownerId": 3
+  }
+}]
